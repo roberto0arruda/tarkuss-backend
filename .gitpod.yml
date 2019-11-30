@@ -3,6 +3,9 @@ image:
 
 ports:
 - port: 3333
+  onOpen: ignore
+- port: 3000
+  onOpen: open-browser
 
 tasks:
 - init: yarn inatall # runs during prebuild
