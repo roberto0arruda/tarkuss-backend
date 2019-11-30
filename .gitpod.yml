@@ -1,14 +1,14 @@
 image:
   file: .gitpod.Dockerfile
 
+tasks:
+- init: yarn install # runs during prebuild
+  command: yarn dev
+- openMode: split-right
+  command: git clone https://github.com/roberto0arruda/tarkuss-frontend.git app && cd app && yarn install && yarn start
+
 ports:
 - port: 3333
   onOpen: ignore
 - port: 3000
   onOpen: open-browser
-
-tasks:
-- init: yarn install # runs during prebuild
-  command: yarn dev
-- openMode: split-right
-  command: git clone https://github.com/roberto0arruda/tarkuss-frontend.git app && cd app && yarn start
