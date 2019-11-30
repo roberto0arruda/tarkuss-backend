@@ -1,0 +1,9 @@
+image:
+  file: .gitpod.Dockerfile
+
+ports:
+- port: 3333
+
+tasks:
+- init: yarn inatall # runs during prebuild
+  command: yarn dev
