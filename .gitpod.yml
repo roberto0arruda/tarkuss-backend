@@ -8,5 +8,7 @@ ports:
   onOpen: open-browser
 
 tasks:
-- init: yarn inatall # runs during prebuild
+- init: yarn install # runs during prebuild
   command: yarn dev
+- openMode: split-right
+  command: cd app && npm install && npm start
